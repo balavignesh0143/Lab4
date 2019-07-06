@@ -1,0 +1,27 @@
+package lab4;
+
+import java.util.Scanner;
+
+public class Exercise1 {
+	static int a(int n)
+	{
+		int sum=0;
+		int s;
+		while(n>0)
+		{
+			s=n%10;
+			n=n/10;
+			sum=sum+(s*s*s);
+		}
+		System.out.println("Sum of cubes: "+sum);
+		return sum;
+	}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the limit:");
+		int n=sc.nextInt();
+		System.out.println(a(n));
+		sc.close();
+	}
+
+}
